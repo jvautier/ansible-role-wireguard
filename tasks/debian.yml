@@ -1,0 +1,18 @@
+---
+# - name: Add ppa inline
+#   shell: add-apt-repository --keyserver hkps://keyserver.ubuntu.com:443 ppa:wireguard/wireguard
+
+- name: Sdd ppa:wireguard/wireguard
+  apt_repository:
+    repo: ppa:wireguard/wireguard
+    state: present
+
+- name: Install wireguard
+  apt:
+    name: "{{ boxes_wg_package_name }}"
+  loop_control:
+    loop_var: boxes_wg_package_name
+  loop:
+    - wireguard
+    - wireguard-tools
+# TODO: sudo apt-get install libmnl-dev libelf-dev linux-headers-$(uname -r) build-essential pkg-config
