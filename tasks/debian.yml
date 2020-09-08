@@ -2,7 +2,7 @@
 # - name: Add ppa inline
 #   shell: add-apt-repository --keyserver hkps://keyserver.ubuntu.com:443 ppa:wireguard/wireguard
 
-- name: Sdd ppa:wireguard/wireguard
+- name: Add ppa:wireguard/wireguard
   apt_repository:
     repo: ppa:wireguard/wireguard
     state: present
