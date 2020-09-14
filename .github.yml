@@ -1,0 +1,8 @@
+---
+fullname: jvautier/ansible-role-wireguard
+description: Install wireguard through ansible
+tags:
+  - ansible
+  - ansible-role
+  - wireguard
+github: {}
